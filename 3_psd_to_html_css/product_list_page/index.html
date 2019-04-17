@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../style.css">
+	</head>
+
+	<body>
+		<div class="container container_page_products"> <!-- modificator -->
+			<header class="header">
+
+				<div class="header__logo-block">
+					<img class="logo logo_sm" src="../images/logo_blue.png" alt="Logo"/>
+				</div>
+
+				<div class="header__search">
+					<form class="search">
+						<i class="fa fa-search" style="font-size:24px"></i>
+						<input class="search__input" type="text" placeholder="Try to find something"/>
+
+					</form>
+				</div>
+				<div class="header__user-block header__user-block_not-authorized"> <!-- header__user-block_not-authorized -->
+
+					<div class="user-info"> <!-- user-info_authorized   - visible -->
+
+						<div class="user-info__list">
+							<div class="avatar avatar_sm">
+								<img src="../images/avatar.png" alt="avatar"/>
+							</div>
+							<div class="name">Kim Evans</div>
+							<button class="user-menu-button"><i class="fa fa-sign-out" style="font-size:24px"></i></button>
+						</div>
+
+						<div class="user-info__user-menu">
+							<a class="user-menu__item" href="#">Add new post</a>
+							<a class="user-menu__item" href="#">Profile</a>
+						</div>
+
+					</div> 
+					
+					<div class="header__login"> <!-- user-info_authorized   - anvisible -->
+						Welcome, <a href="#">login</a> or <a href="#">register</a> for start!
+					</div>  
+					
+				</div>
+
+			</header>
+
+			<div class="content">
+				<section class="products-list">
+
+					<div class="product">
+						<img class="product__img" src="../images/product_1.png" alt="product" />
+						<div class="product__info">
+							<div class="product_title">{{Title}}<i class="fa fa-eye" style="font-size:24px"></i></div>
+						</div>
+					</div>
+
+				</section>
+			</div>
+
+			
+			<footer class="footer">
+				<div class="footer__column">
+					2019 - front-end labs Light IT
+				</div>
+			</footer>
+
+		</div>
+		<script src="script.js"></script>
+		</body>
+
+</html>
