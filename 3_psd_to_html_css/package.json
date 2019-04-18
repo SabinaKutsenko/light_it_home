@@ -1,0 +1,23 @@
+{
+  "name": "3_psd_to_html_css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel liveserver watch",
+    "liveserver": "live-server",
+    "watch": "node-sass sass/main.scss css/style.css -w",
+    "compile": "node-sass sass/main.scss css/style.css",
+    "prefix": "postcss css/style.css --use autoprefixer -o css/style.css",
+    "compress": "node-sass css/style.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2"
+  }
+}

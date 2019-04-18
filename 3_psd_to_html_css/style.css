@@ -7,33 +7,12 @@ html, body {
 
 
 
-.container {
-    height: 100%;
-    display: grid;
-    /*grid-gap: 3px;*/
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
-    color:#000;
-    
-}
-
-.header {
-    grid-column: 2 / -1;
-}
-.container_page_login {
-  grid-template-rows: auto 40px;
-}
 
 
-.content {
-    grid-column: 1 / -1;
-}
 
-.footer {
-    grid-column: 1 / -1;
-    font-size: 14px;
-    background-color: #00b3be;
-}
+
+
+
 
 
 .container > * {
