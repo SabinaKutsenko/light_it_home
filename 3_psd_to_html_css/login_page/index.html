@@ -3,23 +3,80 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 
 	<body>
-		<div class="container container_page_login">
-			<!-- <header class="header"></header> -->
+		<div class="container container__page_login">
+			<header class="header">
+
+				<div class="header__logo-block">
+					<img class="logo logo__size_m" src="../images/logo_blue.png" alt="Logo"/>
+				</div> 
+
+				<div class="header__search">
+					<form class="search">
+						<i class="fa fa-search" style="font-size:24px"></i>
+						<input class="search__input" type="text" placeholder="Try to find something"/>
+
+					</form>
+				</div>
+				<div class="header__user-profile header__user-profile_not-authorized"> <!-- header__user-block_not-authorized -->
+
+					<div class="user-info"> <!-- user-info_authorized   - visible -->
+
+						<div class="user-info__list">
+							<div class="user-info__avatar">
+								<img src="../images/avatar.png" alt="avatar"/>
+							</div>
+							<div class="user-info__name">Kim Evans</div>
+							<button class="user-info__user-menu-button"><i class="fa fa-sign-out"></i></button>
+						</div>
+
+						<div class="user-info__user-menu">
+							<a href="#">Add new post</a>
+							<a href="#">Profile</a>
+						</div>
+
+					</div> 
+					
+					<div class="header__login"> <!-- user-info_authorized   - anvisible -->
+						Welcome, <a href="#">login</a> or <a href="#">register</a> for start!
+					</div>  
+					
+				</div>
+
+			</header>
+
 
 			<div class="content content_sidebar_right">
+
 				<section class="content__main">
 					<div class="login-page-img"></div>
 				</section>
-				<div class="content__sidebar">Sidebar</div>
+
+				<section class="content__sidebar">
+					<img class="logo logo__size_l" src="../images/logo_white.png" alt="Logo" />
+					<div class="authoriz-block">
+						
+						<div class="tabs mrgn-bottom-lg">
+							<button class="btn btn_sm">Sing In</button>
+							<button class="btn btn_sm">Sing Up</button>
+						</div>
+						<form class="form" action="#">
+							<input class="form__input" type="email" placeholder="Email" name="email">
+							<input class="form__input" type="text" placeholder="Password" name="password">
+							<button class="btn btn_lg mrgn-top-lg">Login</button>
+						</form>
+					
+					</div>
+				</section>
 			</div>
 			
 			<footer class="footer">
 				<div class="footer__column">
-					2019 - front-end labs Light IT
+					<span class="copyright">2019 - front-end labs Light IT</span>
 				</div>
 			</footer>
 
