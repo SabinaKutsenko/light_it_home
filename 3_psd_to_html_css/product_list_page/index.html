@@ -11,32 +11,34 @@
 		<div class="container container__page_products"> <!-- modificator -->
 			<header class="header">
 
-				<div class="header__logo-block">
-					<img class="logo logo__size_m" src="../images/logo_blue.png" alt="Logo"/>
-				</div> 
+				<div class="header__left">
+					<div class="header__logo-block">
+						<img class="logo logo__size_m" src="../images/logo_blue.png" alt="Logo"/>
+					</div> 
 
-				<div class="header__search">
-					<form class="search">
-						<i class="fa fa-search" style="font-size:24px"></i>
-						<input class="search__input" type="text" placeholder="Try to find something"/>
-
-					</form>
+					<div class="header__search">
+						<form class="search" action="#">
+							<button type="submit"><i class="fa fa-search"></i></button>
+							<input class="search__input" type="text" placeholder="Try to find something"/>
+						</form>
+					</div>
 				</div>
-				<div class="header__user-block header__user-block_not-authorized"> <!-- header__user-block_not-authorized -->
+
+				<div class="header__user-profile header__user-profile_authorized"> <!-- header__user-block_not-authorized -->
 
 					<div class="user-info"> <!-- user-info_authorized   - visible -->
 
 						<div class="user-info__list">
-							<div class="avatar avatar_sm">
+							<div class="user-info__avatar">
 								<img src="../images/avatar.png" alt="avatar"/>
 							</div>
-							<div class="name">Kim Evans</div>
-							<button class="user-menu-button"><i class="fa fa-sign-out"></i></button>
+							<div class="user-info__name">Kim Evans</div>
+							<button class="user-info__user-menu-button"><i class="fa fa-sign-out"></i></button>
 						</div>
 
 						<div class="user-info__user-menu">
-							<a class="user-menu__item" href="#">Add new post</a>
-							<a class="user-menu__item" href="#">Profile</a>
+							<a href="#">Add new post</a>
+							<a href="#">Profile</a>
 						</div>
 
 					</div> 
@@ -51,6 +53,27 @@
 
 			<div class="content">
 				<section class="products-list">
+
+					<div class="product">
+						<img class="product__img" src="../images/product_1.png" alt="product" />
+						<div class="product__info">
+							<div class="product_title">{{Title}}<i class="fa fa-eye" style="font-size:24px"></i></div>
+						</div>
+					</div>
+
+					<div class="product">
+						<img class="product__img" src="../images/product_1.png" alt="product" />
+						<div class="product__info">
+							<div class="product_title">{{Title}}<i class="fa fa-eye" style="font-size:24px"></i></div>
+						</div>
+					</div>
+
+					<div class="product">
+						<img class="product__img" src="../images/product_1.png" alt="product" />
+						<div class="product__info">
+							<div class="product_title">{{Title}}<i class="fa fa-eye" style="font-size:24px"></i></div>
+						</div>
+					</div>
 
 					<div class="product">
 						<img class="product__img" src="../images/product_1.png" alt="product" />

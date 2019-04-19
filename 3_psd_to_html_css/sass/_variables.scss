@@ -18,6 +18,12 @@ $padding-content-top: 70px;
 	padding-right: 25px;
 }
 
+/* mediascreen
+900
+768
+600 */
+
+
 
 @mixin placeholder {
   &::-webkit-input-placeholder {@content}
