@@ -1,12 +1,10 @@
 .footer {
-    grid-column: 1 / -1;
-    background-color: $primary-color;
-    color: $text-color-light;
-    font-family: $font-bold;
+	grid-column: 1 / -1;
+	background-color: $primary-color;
+	color: $second-color;
+	font-family: $font-bold;
 
-    &__column {
-    	font-size: 18px;
-    }
-}
-.copyright {
+	&__column {
+		font-size: 18px;
+	}
 }

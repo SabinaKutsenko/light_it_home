@@ -9,8 +9,6 @@ $extra-color: #91d763;
 
 $text-color: #4a4a4a;
 
-$text-color-light: #fff;
-
 $padding-content-top: 70px;
 
 %padding-in {
@@ -21,17 +19,15 @@ $padding-content-top: 70px;
 /* mediascreen
 900
 768
-600 */
-
-
+600
+370 */
 
 @mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}  
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}
 }
-
 
 @mixin box-shadow($left, $top, $radius, $color) {
 	box-shadow: $left $top $radius $color;

@@ -316,14 +316,15 @@ fieldset {
 textarea {
   resize: vertical; }
 
-.header__logo-block, .header__search, .header__user-profile_not-authorized .header__login, .user-info__list, .content__sidebar {
+.header__logo-block, .header__search, .header__user-profile_not-authorized .header__login, .user-info__list, .content__sidebar, .products-list {
   padding-left: 25px;
   padding-right: 25px; }
 
 /* mediascreen
 900
 768
-600 */
+600
+370 */
 @font-face {
   font-family: 'Arial';
   src: url(../fonts/Arial/Arial.otf); }
@@ -576,7 +577,30 @@ html, body {
   justify-content: space-between; }
 
 .products-list {
-  display: grid; }
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
+  padding-top: 160px;
+  padding-bottom: 20px; }
+  .products-list .product__img {
+    max-width: 100%;
+    width: 100%; }
+  .products-list .product__info {
+    background-color: #00b3be;
+    color: #fff;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center; }
+  .products-list .product__title {
+    flex: 1;
+    font-family: Arial-Bold, sans-serif;
+    font-size: 18px; }
+  .products-list .product i {
+    flex: 0 1 30px;
+    font-size: 22px; }
 
 .login-page-img {
   height: 100%;

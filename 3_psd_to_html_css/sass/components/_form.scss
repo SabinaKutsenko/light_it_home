@@ -7,13 +7,12 @@
 		padding: 0 15px;
 		background-color: transparent;
 		border: none;
-		border-bottom: 3px solid $text-color-light;
-		color: $text-color-light;
+		border-bottom: 3px solid $second-color;
+		color: $second-color;
 		margin: 10px 0;
 		
 		@include placeholder {
-		    color: #fff;
-		  };
+			color: $second-color;
+		};
 	}
 }
-

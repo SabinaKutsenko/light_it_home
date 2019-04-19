@@ -5,69 +5,69 @@
 	min-height: 55px;
 	width: 100%;
 	align-items: flex-start;
+
 	@media screen and (max-width: 600px) {
 		flex-direction: column;
 		align-items: stretch;
 	}
-
-
 	
 	&__left {
 		flex: 1;
 		display: flex;
+
 		@media screen and (max-width: 768px) {
 			flex-direction: column;
-
 		}
 	}
 
 	&__logo-block {
 		padding-top: 10px;
 		flex-grow: 0;
-	    flex-shrink: 1;
-	    flex-basis: 220px;
-	    @extend %padding-in;
+		flex-shrink: 1;
+		flex-basis: 220px;
+		@extend %padding-in;
 
-	    @media screen and (max-width: 900px) {
-	    	flex-basis: 170px;
-	    }
-	    @media screen and (max-width: 768px) {
-	    	flex-basis: auto!important;
-	    }
-
-	    
+		@media screen and (max-width: 900px) {
+			flex-basis: 170px;
+		}
+		@media screen and (max-width: 768px) {
+			flex-basis: auto!important;
+		}	
 	}
 
 	&__search {
 		padding-top: 10px;
 		flex: 1;
 		@extend %padding-in;
-
 	}
 
 	&__user-profile {
 		flex-grow: 0;
-	    flex-shrink: 1;
-	    flex-basis: 380px;
-	    background-color: $primary-color;
-	    &:hover {
-	    	.user-info__list {
-	    		border-color: $text-color;
-	    	}
-	    }
-	    @media screen and (max-width: 600px) {
-	    	order: -1;
-	    	flex-basis: auto;
-	    }
+		flex-shrink: 1;
+		flex-basis: 380px;
+		background-color: $primary-color;
 
+		&:hover {
 
+			.user-info__list {
+				border-color: $text-color;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			order: -1;
+			flex-basis: auto;
+		}
 	}
 
 	&__user-profile_authorized {
+
 		.user-info {
 			display: flex;
 		}
+
 		&:hover {
+
 			.user-info__user-menu {
 				display: flex;
 			}
@@ -75,6 +75,7 @@
 	}
 
 	&__user-profile_not-authorized {
+
 		.header__login {
 			padding-top: 10px;
 			padding-bottom: 10px;
@@ -97,9 +98,8 @@
 	}
 
 	&__login {
-    	display: none;
-    }
-
+		display: none;
+	}
 }
 
 .user-info {
@@ -126,21 +126,22 @@
 	}
 
 	&__name {
-    	flex: 1;
-    	padding-left: 10px;
-    	color: $text-color-light;
-    	font-family: $font-bold;
+		flex: 1;
+		padding-left: 10px;
+		color: $second-color;
+		font-family: $font-bold;
 	}
 
 	&__user-menu-button {
-    	flex-basis: 25px;
-    	height: 25px;
-    	background-color: transparent;
-    	border: none;
-    	i {
-    		font-size: 24px;
-    		color: $text-color-light;
-    	}
+		flex-basis: 25px;
+		height: 25px;
+		background-color: transparent;
+		border: none;
+
+		i {
+			font-size: 24px;
+			color: $second-color;
+		}
 	}
 	&__user-menu {
 		display: none;
@@ -148,7 +149,7 @@
 
 		a {
 			flex: 1;
-			color: $text-color-light;
+			color: $second-color;
 			height: 35px;
 			display: flex;
 			align-items: center;
@@ -157,19 +158,20 @@
 			text-decoration: none;
 		} 
 	}
-
 }
 
 
 .logo__size_m {
 	height: 41px;
 }
+
 .logo__size_l {
 	height: 69px;
 }
 
 .search {
 	position: relative;
+
 	button {
 		position: absolute;
 		left: 5px;
@@ -188,9 +190,10 @@
 		border-bottom: 1px solid $primary-color;
 		background-color: transparent;
 		width: 100%;
-    	max-width: 450px;
+		max-width: 450px;
+
 		@include placeholder {
-		    color: $text-color;
-		  };
+			color: $text-color;
+		}
 	}
 }
