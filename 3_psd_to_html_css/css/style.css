@@ -316,6 +316,10 @@ fieldset {
 textarea {
   resize: vertical; }
 
+@media print {
+  a[href]:after {
+    content: " (" attr(href) ") "; } }
+
 .header__logo-block, .header__search, .header__user-profile_not-authorized .header__login, .user-info__list, .content__sidebar, .products-list {
   padding-left: 25px;
   padding-right: 25px; }
