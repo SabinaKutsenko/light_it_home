@@ -1,0 +1,27 @@
+.btn {
+	min-height: 35px;
+	border: none;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+	background-color: $second-color;
+	color: $text-color;
+	@include border-radius(0);
+	@include transition(all, 0.1s);
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: $extra-color;
+	}
+
+	&_sm {
+		width: 150px;
+		@media screen and (max-width: 370px) {
+			width: 46%;
+		}
+	}
+	
+	&_lg {
+		width: 100%;
+	}
+}

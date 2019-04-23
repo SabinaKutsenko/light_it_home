@@ -1,0 +1,21 @@
+.login-page-img {
+	height: 100%;
+	background: url("/src/images/login_bg.png") no-repeat center;
+	background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+
+	.container-root__page_login {
+
+		.content__main {
+			height: 100vh;
+			width: 100%;
+		}
+
+		.login-page-img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
