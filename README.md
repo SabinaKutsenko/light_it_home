@@ -5,3 +5,5 @@
 <h5>3_psd_to_html_css</h5>
 <h5>4_caesar</h5>
 <h5>5_battel_sim</h5>
+<h5>6_react_rendering</h5>
+<h5>7_presentational_container_comp</h5>
