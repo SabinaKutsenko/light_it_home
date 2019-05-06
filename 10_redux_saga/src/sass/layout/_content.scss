@@ -1,0 +1,46 @@
+.content {
+	grid-column: 1 / -1;
+
+	&__sidebar {
+		height: 100%;
+		flex-grow: 0;
+		flex-shrink: 1;
+		flex-basis: 380px;
+		background-color: #00b3be;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-top: $padding-content-top;
+		@extend %padding-in;
+	}
+
+	&__main {
+		flex:1;
+		height: 100%;
+	}
+}
+
+.contentSidebarRight {
+	height:100%;
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+
+		.content__sidebar {
+			flex-basis: auto;
+			width: 100%;
+		}
+		
+	}
+}
+
+.authorizBlock {
+	width: 100%;
+	padding-top: 100px;
+}
+
+.tabs {
+	display: flex;
+	justify-content: space-between;
+}
