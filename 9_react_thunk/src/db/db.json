@@ -1,0 +1,16 @@
+{"data": 
+	[
+        {
+            id: 0,
+            firstName: "Sara",
+            lastName: "Conor",
+            pass: 12345  
+        },
+        {
+        	id: 1,
+            firstName: "Anna",
+            lastName: "Corenina",
+            pass: 00000  
+        }
+    ]
+}
