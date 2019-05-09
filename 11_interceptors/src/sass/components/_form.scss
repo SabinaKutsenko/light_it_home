@@ -1,0 +1,37 @@
+.form {
+	display: flex;
+	flex-direction: column;
+
+	&__input {
+		display: flex;
+		flex-direction: column;
+
+		/*height: 35px;
+		padding: 0 15px;
+		background-color: transparent;
+		border: none;
+		border-bottom: 3px solid $second-color;
+		color: $second-color;
+		margin: 10px 0;*/
+
+		input {
+			background-color: transparent;
+			border: none;
+			height: 35px;
+			padding: 0 15px;
+			background-color: transparent;
+			border: none;
+			border-bottom: 3px solid $second-color;
+			color: $second-color;
+			margin: 10px 0;
+
+			@include placeholder {
+				color: $second-color;
+			};
+		}
+		
+		@include placeholder {
+			color: $second-color;
+		};
+	}
+}
