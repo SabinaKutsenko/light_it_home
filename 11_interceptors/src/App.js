@@ -16,6 +16,9 @@ import LoginPage from "./containers/Auth/LoginPage";
 import RegisterPage from "./containers/Auth/RegisterPage";
 import ProfilePage from "./containers/Profile/ProfilePage";
 import ProductPage from "./containers/Product/ProductPage";
+import AddProductPage from "./containers/AddProduct/AddProductPage";
+import NotFound from "./containers/NotFound";
+import SearchResult from "./containers//SearchResult/SearchResult";
 import Loader  from "./components/Loader";
 
 import { fetchAuthCheckToken } from "./saga/auth/auth.action";
@@ -29,15 +32,14 @@ class App extends Component {
 		loading: bool
 	}
 
+
 	render() {
 		const { loading, auth, fetchAuthCheckToken } = this.props;
 
-		const token =localStorage.getItem('token');
+		const token = localStorage.getItem('token');	
+
 		if(token) {
-			/*console.log('have token',token);*/
-			/*fetchAuthCheckToken(token);*/
-		} else {
-			/*console.log("no token");*/
+			fetchAuthCheckToken(token);
 		}
 
 		return (
@@ -46,9 +48,14 @@ class App extends Component {
 
 				<div styleName="containerRoot">
 					<Header />
+
 					<Switch>
 						<Route exact path={"/login"} render={() => <LoginPage />} />
 						<Route exact path={"/register"} render={() => <RegisterPage />} />
+						<Route exact path={"/not-found"} render={() => <NotFound />} />
+						<Route exact path={"/search_result"} render={(props) => <SearchResult {...props} />} />
+				
+
 						<PrivateRoute
 							exact
 							path={"/"}
@@ -65,6 +72,13 @@ class App extends Component {
 						/>
 						<PrivateRoute
 							exact
+							path={"/add_product"}
+							state={auth}
+							to={"/login"}
+							component={AddProductPage}
+						/>
+						<PrivateRoute
+							exact
 							path={"/profile"}
 							state={auth}
 							to={"/login"}
@@ -78,8 +92,8 @@ class App extends Component {
 	}
 }
 
-const mapStateToProps = ({ loader, auth }) => ({
-	loading: loader.loading,
+const mapStateToProps = ({ products, auth }) => ({
+	loading: products.loading,
 	auth: auth.auth
 });
 

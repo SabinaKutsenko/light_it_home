@@ -16,10 +16,10 @@ class Profile extends Component {
 		const { id, username, firstName, lastName, email, avatar } = userInfo;
 
 		return (
-			<Fragment styleName="profile">
+			<Fragment>
 				<div styleName="profileImg">
 					<div styleName="profileImgWrap">
-						<img src={avatar} alt="Avatar" />
+						<img src={avatar ? avatar : '../src/assets/images/default_img.png'} alt="Avatar" />
 					</div>
 				</div>
 				<div styleName="profileInfo">

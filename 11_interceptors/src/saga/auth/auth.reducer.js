@@ -24,12 +24,6 @@ export default function (state = initialState, action) {
 				authInfo: {},
 				error: {}
 			};
-		/*case "FETCH_AUTH_CHECK":
-			return {
-				auth: true,
-				authInfo: action.payload,
-				error: ''
-			}*/
 		default:
 			return state;
 	}

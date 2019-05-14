@@ -19,7 +19,6 @@ export const fetchTokenRequest = (data) => {
 	return post("token-verify/", data);    /* return promise*/ 
 }
 
-export const fetchProfileRequest = () => {
-	return get("profile/");    /* return promise*/ 
+export const fetchProfileRequest = (data, headers) => {
+	return get("profile/", data, headers);    /* return promise*/ 
 }
-

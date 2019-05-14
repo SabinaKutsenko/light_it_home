@@ -32,7 +32,7 @@ class HeaderProfileBlock extends Component {
 
 					<div styleName="userInfoList">
 						<div styleName="userInfoAvatar">
-							<img src={avatar} alt="avatar" />
+							<img src={avatar ? avatar : '../src/assets/images/default_img.png'} alt="avatar" />
 						</div>
 						<div styleName="userInfoName">{username}</div>
 						<button onClick={this.logOutUser} styleName="userInfoMenuButton tooltip">
@@ -42,7 +42,7 @@ class HeaderProfileBlock extends Component {
 					</div>
 
 					<div styleName="userInfoUserMenu">
-						<Link to={`/profile`} >Add new post</Link>
+						<Link to={`/add_product`} >Add new post</Link>
 						<Link to={`/profile`} >Profile</Link>
 					</div>
 

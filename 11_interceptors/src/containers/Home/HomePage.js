@@ -12,11 +12,10 @@ class HomePage extends Component {
 	static propTypes = {
 		fetchProducts: func,
 		productsList: array,
-		productsSearchResult: array
 	}
 
 	componentDidMount() {
-		this.props.fetchProducts();
+		this.props.fetchProducts(); 
 	}
 
 	renderPost = (product, index) => {
@@ -31,14 +30,12 @@ class HomePage extends Component {
 		return (
 			<div styleName="content">
 				<section styleName="productsList">
-					{ productsSearchResult.length > 0 ?
-						productsSearchResult.map((product, index) => {
-							return this.renderPost(product, index);
-						})
-						:
+					{ productsList.length > 0 ?
 						productsList.map((product, index) => {
 							return this.renderPost(product, index);
 						})
+						:
+						"Products not found"
 					}
 				</section>
 			</div>
@@ -46,9 +43,8 @@ class HomePage extends Component {
 	}
 }
 
-const mapStateToProps = ({ products, loader, searchProducts }) => ({
-	productsList: products.productsList,
-	productsSearchResult: searchProducts.productsSearchResult
+const mapStateToProps = ({ products }) => ({
+	productsList: products.productsList
 });
 
 const mapDispatchToProps = (dispatch) => ({

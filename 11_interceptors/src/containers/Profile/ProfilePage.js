@@ -17,7 +17,7 @@ class ProfilePage extends Component {
 		return (
 			<div styleName="content">
 				<section styleName="profileInner">
-					<Profile userInfo={authInfo} />
+					<Profile styleName="profile" userInfo={authInfo} />
 				</section>
 			</div>
 		);

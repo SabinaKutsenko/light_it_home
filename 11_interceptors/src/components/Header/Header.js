@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import connect from "react-redux/es/connect/connect";
 import { array, func, object } from "prop-types";
 
@@ -13,9 +13,7 @@ import HeaderProfileBlock from './HeaderProfileBlock';
 
 class Header extends Component {
 	static propTypes = {
-		fetchProductsSearch: func,
-		history: object,
-		productsList: array,
+		fetchProductsSearch: func
 	}
 
 	state = {
@@ -23,14 +21,14 @@ class Header extends Component {
 	};
 
 	handleSearch = (e) => {
-		const { productsList } = this.props;
 		const searchQuery = e.target.value;
 		this.setState(() => ({ searchQuery }));
+		
+	}
 
-		const page = window.location.pathname;
-		(page != "/") && this.props.history.push("/");
-
-		this.props.fetchProductsSearch(searchQuery, productsList);
+	searchRequestSend = (e) => {
+		const { searchQuery } = this.state;
+		this.props.fetchProductsSearch(searchQuery);
 	}
 
 	render() {
@@ -53,11 +51,10 @@ class Header extends Component {
 }
 
 const mapStateToProps = ({ products }) => ({
-	productsList: products.productsList,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	fetchProductsSearch: (searchQuery, productsList) => dispatch(fetchProductsSearch(searchQuery, productsList))
+	fetchProductsSearch: (searchQuery) => dispatch(fetchProductsSearch(searchQuery))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CSSModules(Header, styles, { allowMultiple: true }));

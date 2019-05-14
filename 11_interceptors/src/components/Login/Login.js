@@ -18,7 +18,7 @@ class Form extends Component {
 
 	submit = (values) => {
 		const { fetchAuth } = this.props;
-		fetchAuth(values)
+		fetchAuth(values);
 	}
 
 	render() {

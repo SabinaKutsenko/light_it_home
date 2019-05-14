@@ -1,5 +1,4 @@
 import { put, takeEvery, call } from 'redux-saga/effects';
-/*import axios from 'axios';*/
 import { fetchProductsRequest } from '../../api_client/products';
 
 export default function* watchFetchProducts() {
@@ -8,18 +7,13 @@ export default function* watchFetchProducts() {
 
 export function* fetchProducts() {
 	yield put({ type: "FETCH_PRODUCTS_PENDING" });
-	yield put({ type: "REQUESTED_LOADER_ON" });
 	try {
 		const result = yield call(fetchProductsRequest);
-		/*const result = yield call(axios, 'http://light-it-04.tk/api/posters/');*/
 		yield put({
 			type: "FETCH_PRODUCTS_SUCCESS",
 			payload: result.data.data,
-			/*loading: true*/  /* <= we can use helpLoader */
 		});
-		yield put({ type: "REQUESTED_LOADER_OFF" });
 	} catch (error) {
 		yield put({ type: "FETCH_PRODUCTS_FAIL", payload: error });
-		yield put({ type: "REQUESTED_LOADER_OFF" });
 	}
 }
