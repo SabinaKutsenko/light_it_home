@@ -11,17 +11,9 @@ export function* fetchAddProduct(data) {
 		console.log(data);
 		const token = localStorage.getItem("token");
 		let headers = {
-		    'Authorization': `JWT ${token}`
-		  };
-		const result = yield call(fetchAddProductRequest, data, headers /*{
-			"theme":data.data.theme,
-			"text": data.data.text,
-			"price": data.data.price,
-			"currency": data.data.currency,
-			"contract_price": data.data.contract_price,
-			"location": data.data.location,
-			"is_active": data.data.is_active
-		}*/);
+			'Authorization': `JWT ${token}`
+		};
+		const result = yield call(fetchAddProductRequest, data, headers);
 		yield put({
 			type: "FETCH_ADD_PRODUCTS_SUCCESS",
 			payload: result.data.data,

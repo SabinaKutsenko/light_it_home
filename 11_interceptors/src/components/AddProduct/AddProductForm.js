@@ -39,8 +39,8 @@ class AddProductForm extends Component {
 				<Field lable="Price" styleName="formInput" name="price" component={renderField} placeholder="Price" type="number" />
 				<Field lable="Currency" styleName="formInput" name="currency" component={selectField} placeholder="Currency" type="dropdown">
 					<option name='dollar'>Dollar</option>
-			        <option name='euro'>Euro</option>
-			    </Field>
+					<option name='euro'>Euro</option>
+				</Field>
 				<Field lable="Contract Price" styleName="formInput" name="contract_price" component={renderField} placeholder="Contact Price" type="checkbox" />
 				<Field lable="Location" styleName="formInput" name="location" component={renderField} placeholder="Location" type="text" />
 				<Field lable="Is Active" styleName="formInput" name="is_active" component={renderField} placeholder="Is Active" type="checkbox" />
@@ -61,7 +61,7 @@ const renderField = ({ className, placeholder, input, lable, type, meta: { touch
 
 const selectField = ({ className, input, children }) => (
   <select className={className} {...input}>
-    {children}
+	{children}
   </select>
 );
 

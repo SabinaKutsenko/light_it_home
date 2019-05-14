@@ -1,24 +1,21 @@
 import { post, get } from "./base";
 
-/*const url = "login/";
-const url = "logout/";*/
-
 export const fetchAuthRequest = (data) => {
-	return post("login/", data);    /* return promise*/ 
+	return post("login/", data);
 }
 
 export const fetchAuthUpRequest = (data) => {
-	return post("registration/", data);    /* return promise*/ 
+	return post("registration/", data);
 }
 
 export const fetchLogoutRequest = () => {
-	return post("logout/");    /* return promise*/ 
+	return post("logout/");
 }
 
 export const fetchTokenRequest = (data) => {
-	return post("token-verify/", data);    /* return promise*/ 
+	return post("token-verify/", data);
 }
 
 export const fetchProfileRequest = (data, headers) => {
-	return get("profile/", data, headers);    /* return promise*/ 
+	return get("profile/", data, headers);
 }

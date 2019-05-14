@@ -8,8 +8,7 @@ function request ( method, url, data, headers, qs) {
 		data,
 		headers,
 		qs
-		});		
-		/*puch\put ( частичное обновление \ полное )*/
+		});
 }
 
 export const get = (url, data, headers ) => {

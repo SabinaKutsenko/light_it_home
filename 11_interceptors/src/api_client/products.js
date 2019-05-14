@@ -11,5 +11,3 @@ export const getSearchProducts = (searchQuery) => {
 export const fetchAddProductRequest = (data, headers) => {
 	return post('posters/', data, headers );    /* return promise*/ 
 }
-
-/* yield call ( fetchProduct );*/
