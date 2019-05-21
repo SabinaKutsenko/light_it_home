@@ -1,0 +1,1 @@
+export const base_url = "http://light-it-04.tk/api/" ;

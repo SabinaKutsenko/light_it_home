@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "username": "sara25",
+    "firstName": "Sara",
+    "lastName": "Conor",
+    "password": "1234",
+    "email": "sara@gmail.com",
+    "avatarSrc": "../src/assets/images/avatar.png"
+    },
+  {
+    "id": 1,
+    "username": "AnnaBest",
+    "firstName": "Anna",
+    "lastName": "Karenina",
+    "password": "1234",
+    "email": "anna@gmail.com",
+    "avatarSrc": "../src/assets/images/volk.jpg"
+  },
+  {
+    "id": 100,
+    "username": "Anuta",
+    "firstName": "Anna",
+    "lastName": "Karenina",
+    "password": "1234",
+    "email": "anna2@gmail.com",
+    "avatarSrc": "../src/assets/images/isolated.jpg"
+  },
+  {
+    "id": 103,
+    "username": "Killer555",
+    "firstName": "Andrey",
+    "lastName": "Smeshko",
+    "password": "0000",
+    "email": "volk@gmail.com",
+    "avatarSrc": "../src/assets/images/volk.jpg"
+  }
+]

@@ -1,0 +1,23 @@
+.addProduct {
+	display: flex;
+	width: 100%;
+	max-width: 950px;
+	@extend %padding-in;
+	padding-top: 160px;
+	padding-bottom: 20px;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+
+	.form {
+		@extend %padding-in;
+		width: 100%;
+		background-color: $primary-color;
+		padding-bottom: 15px;
+	}
+}
+
