@@ -1,0 +1,49 @@
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 35px;
+	border: none;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+	background-color: $second-color;
+	color: $text-color;
+	text-align: center;
+	@include border-radius(0);
+	@include transition(all, 0.1s);
+
+	a {
+		text-decoration: none;
+		color: $text-color;
+	}
+
+	&:hover,
+	a:hover,
+	&:focus,
+	a:focus,
+	&:active,
+	a:active{
+		border-color: $extra-color;
+		text-decoration: none;
+	}
+
+	&__sm {
+		width: 150px;
+		@media screen and (max-width: 370px) {
+			width: 46%;
+		}
+	}
+	
+	&__lg {
+		width: 100%;
+	}
+
+	&__light {
+		background-color: $primary-color;
+		font-size: 14px;
+
+		a {
+			color: $second-color;
+		}
+	}
+}
