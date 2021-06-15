@@ -60,7 +60,7 @@
     "eslint-loader": "^2.1.2",
     "event-emitter": "^0.3.5",
     "font-awesome": "^4.7.0",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.36",
     "react": "^16.8.6",
     "react-css-modules": "^4.7.9",
     "react-dom": "^16.8.6",
